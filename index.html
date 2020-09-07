@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LIS Bunny首頁</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="LIS_Bunny.css">
+    <meta name="google-site-verification" content="TzoLMjPETDp5jn8C6w4fefepTlMvMn55h17z_TmEskw" />
+    <!-------------------------------------------->
+    <style>
+        body {
+            background: linear-gradient(120deg, transparent 30%, rgba(191, 191, 191, 1)80%) center center/cover, url("LIS_photo/web-photo/lisbunny-bgc.jpg");
+            width: 100%;
+            overflow: hidden;
+        }
+        .logo{
+            width: 15%;
+            perspective: 1000px;
+            /*立體透視深度*/
+            transform-style: preserve-3d;
+            animation: spin 10s linear infinite;
+            transform-origin: 116px 200px 116px;
+            position: absolute;
+            top:30%;
+            bottom: 50%;
+            left: 40%;
+            right: 0;
+        }
+        .logo img {
+            width: 300px;
+            height: 300px;   
+        }
+        @keyframes spin {
+        from {
+        -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+
+        to {
+        -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+        }
+        
+        .wrapper {
+            width: 100%;
+            height: 600px;
+            background-color: rgba(25, 181, 254, 0);
+            position: relative;
+        }
+        
+        .wrapper h1 {
+            font-size: 100px;
+            color: #eee;
+            display: block;
+            font-weight: 500;
+            position: absolute;
+            top: 400px;
+            left: 850px;
+            transition: .5s;
+        }
+        
+        .wrapper h1:hover {
+            transform: translateY(-50px);
+            color: black;
+        }
+        
+        .wrapper p {
+            position: absolute;
+            left: 870px;
+            top: 550px;
+            color: #eee;
+            transition: .5s;
+        }
+        
+        .wrapper p:hover {
+            transform: translateY(-100px);
+            color: black;
+        }
+        
+        .breadcrumb {
+            background-color: rgba(191, 191, 191, .2);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+           
+        }
+        
+        .breadcrumb a {
+            color: #000;
+        }
+        /* iphone and smartphone */
+        
+        @media screen and (max-width: 700px) {
+            .logo img {
+                width: 200px;
+                height: 200px;
+                position: fixed;
+                right: 20%;
+                bottom: 50%;
+            }
+            body {
+                height: 800px;
+            }
+            .wrapper h1 {
+                font-size: 60px;
+                left: 30px;
+                top: 400px;
+            }
+            .wrapper p {
+                left: 35px;
+                top: 460px;
+            }
+            .breadcrumb {
+                bottom: 0px;
+            }
+            .breadcrumb li{
+                font-size: 15px;
+            }
+        }
+        /* ipad */
+        
+        @media screen and (min-width: 700px) and (max-width: 999px) {
+            .logo img {
+                position: fixed;
+                right: 10%;
+                bottom: 10%;
+            }
+            body {
+                height: 1024px;
+            }
+            .wrapper h1 {
+                font-size: 80px;
+                left: 400px;
+                top: 500px;
+            }
+            .wrapper p {
+                left: 400px;
+                top: 600px;
+            }
+            .wrapper p:hover {
+                transform: translateY(-120px);
+                color: black;
+            }
+            .breadcrumb {
+                bottom: 0px;
+            }
+        }
+        /* ipad-pro */
+        
+        @media screen and (min-width: 1000px) and (max-width: 1025px) {
+            .logo img {
+                position: fixed;
+                right: 5%;
+                bottom: 5%;
+            }
+            body {
+                height: 1366px;
+            }
+            .wrapper h1 {
+                font-size: 120px;
+                left: 400px;
+                top: 800px;
+            }
+            .wrapper p {
+                font-size: 40px;
+                left: 400px;
+                top: 950px;
+            }
+            .wrapper p:hover {
+                transform: translateY(-200px);
+                color: black;
+            }
+            .breadcrumb {
+                bottom: 0px;
+            }
+        }
+    </style>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+</head>
+
+<body>
+
+
+
+
+
+
+     <div class="dropdown">
+         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+             data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+             M E N U
+         </a>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+             <a class="dropdown-item" href="index.html">H O M E P A G E</a>
+             <hr>
+             <a class="dropdown-item" href="information.html">資訊組織</a>
+             <hr>
+             <a class="dropdown-item" href="reference.html">參考資源</a>
+             <hr>
+             <a class="dropdown-item" href="elearn.html">數位典藏與數位學習</a>
+             <hr>
+             <a class="dropdown-item" href="libraryscience.html">圖書資訊學導論</a>
+             <hr>
+             <a class="dropdown-item" href="about.html">A B O U T</a>
+             <hr>
+             <a class="dropdown-item" href="other.html">其他資料(一到四年級)</a>
+         </div>
+     </div>
+
+    <div class="logo">
+        <img src="LIS_photo/web-photo/lis_logo_3_transparent.png" alt="logo">
+    </div>
+    <div class="wrapper">
+        <!-- <img src="https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="big photo"> -->
+        <h1 class="display-4">LIS Bunny</h1>
+        <p class="lead">輔大圖資系 資源共享網站</p>
+    </div>
+
+
+    <!-- ©LIS Bunny / Sirla / 輔大圖資系 / 02/19/2020 22:00:03 -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">&copy;LIS Bunny All rights reserved</li>
+            <li class="breadcrumb-item"><a href="https://sirla-fjulis.github.io/">Sirla</a></li>
+            <li class="breadcrumb-item"><a href="http://web.lins.fju.edu.tw/chi/">輔大圖資系</a></li>
+            <li class="breadcrumb-item">
+                <a id="lastModified"></a>
+            </li>
+        </ol>
+    </nav>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- jquery 起手式 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            $('.btn').hover(function() {
+                $('.dropdown-menu').slideDown('slow')
+            })
+
+            $("body").click(function() {
+                $("h1").fadeIn("slow");
+            })
+
+
+
+        })
+    </script>
+    <script>
+        //last modified time
+        var lastModified = document.querySelector('#lastModified')
+        var msg = '<a>最後修改時間: </a>' + document.lastModified
+        lastModified.innerHTML = msg
+    </script>
+    <!--將script放在最後面是因為放在前面的head裡會阻擋載入速度-->
+    <!--bootstrap高度依賴jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
